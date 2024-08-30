@@ -1,7 +1,8 @@
-`````Automatisation et Optimisation de la Gestion de l'Infrastructure Informatique
+`````
+## Automatisation et Optimisation de la Gestion de l'Infrastructure Informatique
 Ce projet est un projet PFA qui vise à automatiser et optimiser la gestion de l'infrastructure informatique en utilisant des technologies telles que Docker, Ansible, et Flask. Le projet permet de gérer des conteneurs Nginx et Odoo via une interface web intuitive, et inclut également un environnement de production avec Grafana et Prometheus pour la surveillance.
 
-Table des Matières
+## Table des Matières
 Aperçu
 Technologies Utilisées
 Installation
@@ -9,21 +10,21 @@ Utilisation
 Structure du Projet
 Contribution
 Licence
-Aperçu
+## Aperçu
 Le projet permet à l'utilisateur de lancer des conteneurs Docker pour Nginx et Odoo sur des plages de ports spécifiques. Les conteneurs peuvent être configurés pour s'exécuter pendant des périodes définies (1 jour, 1 semaine, 1 mois) à l'aide d'Ansible. Une interface web construite avec Flask permet de gérer ces conteneurs de manière intuitive.
 
-Technologies Utilisées
+##Technologies Utilisées
 Docker : Pour la création et la gestion des conteneurs.
 Ansible : Pour l'orchestration du déploiement des conteneurs.
 Flask : Pour la création de l'interface web.
 HTML/CSS/JavaScript : Pour l'interface utilisateur.
 Prometheus et Grafana : Pour la surveillance et la visualisation des métriques.
-Installation
+##Installation
 Prérequis
 Docker et Docker Compose installés
 Ansible installé
 Python 3.x et pip installés
-Étapes d'installation
+##Étapes d'installation
 Clonez ce dépôt :
 
 bash
@@ -44,7 +45,7 @@ Copier le code
 python app.py
 Accédez à l'interface web via votre navigateur à l'adresse : http://localhost:5000
 
-Utilisation
+##Utilisation
 Lancer un Conteneur
 Sélectionnez le type de conteneur que vous souhaitez exécuter (Nginx ou Odoo).
 Choisissez la durée d'exécution du conteneur (1 jour, 1 semaine, ou 1 mois).
@@ -58,7 +59,7 @@ Copier le code
 docker-compose up -d
 Accédez à Grafana via : http://localhost:3001
 
-Structure du Projet
+##Structure du Projet
 bash
 Copier le code
 ├── app.py                     # Application Flask principale
@@ -78,10 +79,9 @@ Copier le code
 │   ├── script_nginx.py
 │   └── script_odoo.py
 └── Rapport_de_projet/         # Dossier contenant les documents du projet
-Contribution
+##Contribution
 Les contributions sont les bienvenues ! Veuillez soumettre une pull request pour toute amélioration, correction de bug, ou nouvelle fonctionnalité.
 
-Licence
+##Licence
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
-
 `````

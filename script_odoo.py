@@ -1,3 +1,4 @@
+# script_odoo.py
 import os
 import subprocess
 
@@ -29,17 +30,17 @@ def get_next_port(port_range):
 
     return None
 
-def run_nginx_container():
-    image_name = "my-nginx-image"
-    port_range = (8080, 8090)
+def run_odoo_container():
+    image_name = "my-odoo-image"
+    port_range = (8069, 8079)
     next_port = get_next_port(port_range)
 
     if next_port is None:
-        return None, "No available ports for Nginx."
+        return None, "No available ports for Odoo."
 
     command = [
         "ansible-playbook", 
-        "playbooks/nginx_playbook.yml",  
+        "playbooks/odoo_playbook.yml",  # Chemin mis à jour
         "-e", f"next_port={next_port}",
         "-e", f"port={next_port}",
         "-e", f"image_name={image_name}"
@@ -47,4 +48,4 @@ def run_nginx_container():
 
     subprocess.run(command)
 
-    return f"nginx_container_{next_port}", next_port
+    return f"odoo_container_{next_port}", next_port

@@ -6,7 +6,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - C:/Users/HP/prometheus-2.53.1.windows-amd64/prometheus.yml:/etc/prometheus/prometheus.yml
+      - C:/Users/HP/prometheus-2.53.1.windows-amd64/prometheus.yml:/etc/prometheus/prometheus.yml  # Corrected path
 
   grafana:
     image: grafana/grafana
@@ -14,7 +14,7 @@ services:
       - "3001:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
-
+    
   node-exporter:
     image: prom/node-exporter
     ports:
@@ -30,17 +30,3 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
     restart: always
-
-  nginx:
-    build: .
-    ports:
-      - "8080:80"
-
-  nginx-exporter:
-    image: nginx/nginx-prometheus-exporter:latest
-    ports:
-      - "9113:9113"
-    command: ["-nginx.scrape-uri", "http://nginx:80/metrics"]
-    depends_on:
-      - nginx
-

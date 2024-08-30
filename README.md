@@ -1,4 +1,4 @@
-Automatisation et Optimisation de la Gestion de l'Infrastructure Informatique
+`````Automatisation et Optimisation de la Gestion de l'Infrastructure Informatique
 Ce projet est un projet PFA qui vise à automatiser et optimiser la gestion de l'infrastructure informatique en utilisant des technologies telles que Docker, Ansible, et Flask. Le projet permet de gérer des conteneurs Nginx et Odoo via une interface web intuitive, et inclut également un environnement de production avec Grafana et Prometheus pour la surveillance.
 
 Table des Matières
@@ -84,3 +84,4 @@ Les contributions sont les bienvenues ! Veuillez soumettre une pull request pour
 Licence
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
+`````

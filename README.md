@@ -30,21 +30,19 @@ Une interface web construite avec Flask permet de gérer ces conteneurs de mani�
 - Python 3.x et pip installés
 ## Étapes d'installation
 1. Clonez ce dépôt :
-
-   ```bash
+2. 
+   ```
    git clone https://github.com/votre_nom_utilisateur/votre_projet.git
    cd votre_projet
 2.Installez les dépendances Python nécessaires :
 ```
-bash
-Copier le code
+
 pip install -r requirements.txt
 Configurez les fichiers nginx_playbook.yml et odoo_playbook.yml avec les chemins corrects si nécessaire.
 ```
 3.Exécutez l'application Flask :
 ```
-bash
-Copier le code
+
 python app.py
 Accédez à l'interface web via votre navigateur à l'adresse : http://localhost:5000
 ```
@@ -58,14 +56,12 @@ Accédez à l'interface web via votre navigateur à l'adresse : http://localhost
 Les conteneurs de production pour Grafana, Prometheus, et d'autres services de surveillance peuvent être démarrés 
 en utilisant le fichier docker-compose.yml fourni :
 
-```bash
-Copier le code
+```
 docker-compose up -d
 Accédez à Grafana via : http://localhost:3001
 ```
 ## Structure du Projet
-```bash
-Copier le code
+```
 ├── app.py                     # Application Flask principale
 ├── Dockerfile                 # Dockerfile pour l'image Nginx
 ├── dockerfileodoo             # Dockerfile pour l'image Odoo
